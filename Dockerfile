@@ -12,6 +12,10 @@ ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 7.2.0
 
 USER root
+ADD https://www.postgresql.org/media/keys/ACCC4CF8.asc /var/postgres/
+RUN apt-key add /var/postgres/ACCC4CF8.asc
+RUN echo deb 'http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' >> /etc/apt/sources.list.d/pgdg.list 
+RUN apt-get update && apt-get install -y postgresql postgresql-contrib
 
 RUN apt-get update && apt-get install -y curl git xvfb firefox apt-transport-https \
   && apt-get clean \
