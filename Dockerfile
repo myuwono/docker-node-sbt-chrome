@@ -3,7 +3,7 @@ MAINTAINER Timoteo Ponce <timo.slack@gmail.com>
 
 ##########################
 # INSTALL JAVA, SBT and other deps
-ENV SBT_VERSION 0.13.11
+ENV SBT_VERSION 0.13.15
 ENV SBT_HOME /usr/local/sbt
 ENV JAVA_HOME /usr/jdk1.8.0_66
 ENV PATH ${PATH}:${JAVA_HOME}/bin
